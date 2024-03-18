@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Obrigado</title>
+    <meta charset="UTF-8">
+</head>
+<body onload="myFunction()">
+
+    <div id="nome"></div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type='text/javascript'>
+
+        function myFunction() {
+
+            var parameters = location.search.substring(1).split("&");
+
+            var temp = parameters[0].split("=");
+            n = temp[1];
+            document.getElementById("nome").innerHTML = unescape(n)  + ", Obrigado por se inscrever";
+        }
+
+    </script>
+<br>
+<br>
+<div class="button">
+    <button onclick="history.back()">Voltar</button>
+</div>
+</body>
+</html>
